@@ -1,0 +1,38 @@
+{
+  "retention_2013": {
+    "etsu": 66.0,
+    "regional_median": 78.0,
+    "regional_n": 39,
+    "georgia_median": 72.0,
+    "georgia_n": 14,
+    "etsu_pctile_regional": 5.128205128205128,
+    "etsu_pctile_all_peers": 5.660377358490567
+  },
+  "retention_2024": {
+    "etsu": 76.0,
+    "regional_median": 78.0,
+    "regional_n": 39,
+    "georgia_median": 77.0,
+    "georgia_n": 15,
+    "etsu_pctile_regional": 23.076923076923077,
+    "etsu_pctile_all_peers": 27.77777777777778
+  },
+  "graduation_2013": {
+    "etsu": 41.3,
+    "regional_median": 51.2,
+    "regional_n": 39,
+    "georgia_median": 42.7,
+    "georgia_n": 14,
+    "etsu_pctile_regional": 23.076923076923077,
+    "etsu_pctile_all_peers": 28.30188679245283
+  },
+  "graduation_2024": {
+    "etsu": 53.2,
+    "regional_median": 57.7,
+    "regional_n": 39,
+    "georgia_median": 48.9,
+    "georgia_n": 15,
+    "etsu_pctile_regional": 33.33333333333333,
+    "etsu_pctile_all_peers": 44.44444444444444
+  }
+}
