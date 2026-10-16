@@ -1,0 +1,5 @@
+data_raw/
+extract/
+outputs/ipeds.db
+__pycache__/
+*.pyc
