@@ -6,6 +6,8 @@
 
 *Retention rate: the share of first-time, full-time students who come back the next fall. Graduation rate: the share who finish a bachelor's degree within six years.*
 
+![UTRGV vs Texas peer median: retention and six-year graduation, 2016-2023](outputs/figures/utrgv_vs_texas_peers.png)
+
 ## The short answer
 
 1. **Retention is above the Texas peer median in every year since UTRGV opened.** The gap ranged from 2 to 9.5 points. In 2023 UTRGV was at 79% and the median was 73%.
@@ -62,6 +64,7 @@ bash run.sh        # downloads IPEDS files from nces.ed.gov, builds the database
 | `outputs/utrgv_vs_tx_no_r1.csv` | Same, without class 15 (research-heavy) schools |
 | `outputs/dq/`, `outputs/dq_summary.csv` | Results of the 16 data-quality checks |
 | `sql/01_views.sql` | Peer rule and analysis views |
-| `src/` | Download, build, check and comparison scripts |
+| `outputs/figures/utrgv_vs_texas_peers.png` | The chart above (`src/04_chart.py`) |
+| `src/` | Download, build, check, comparison and chart scripts |
 
 Built from public IPEDS data. This is an independent analysis and is not affiliated with UTRGV.
