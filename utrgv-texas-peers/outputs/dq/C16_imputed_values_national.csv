@@ -1,0 +1,4 @@
+flag,meaning,institution_years
+N,Imputed: nearest neighbor,50
+P,Imputed: carry forward,34
+C,Analyst corrected reported value,1
