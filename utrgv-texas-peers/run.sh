@@ -6,3 +6,4 @@ bash src/00_download.sh
 python3 -I src/01_build_db.py
 python3 -I src/02_quality_checks.py
 python3 -I src/03_compare.py
+python3 src/04_chart.py
