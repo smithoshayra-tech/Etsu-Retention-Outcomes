@@ -1,0 +1,17 @@
+check,severity,status,rows_flagged,description
+C01_coverage_gap,warn,FLAG,3,Peer institution has no retention record for a report year
+C02_duplicate_ef,fail,PASS,0,"More than one row per institution, year and file version (retention)"
+C03_duplicate_gr,fail,PASS,0,"More than one row per institution, year, measure and file version (graduation)"
+C04_retention_missing,warn,FLAG,15,Peer institution-year with no retention rate
+C05_retention_not_reported,info,PASS,0,Retention value not flagged R (reported); IPEDS flag shows it was imputed or derived
+C06_retention_out_of_range,fail,PASS,0,Retention rate outside 0-100
+C07_retention_recompute,warn,PASS,0,Published retention rate differs from retained / adjusted cohort by more than 1 point
+C08_graduation_logic,fail,PASS,0,"Completers exceed cohort, or negative counts"
+C09_graduation_missing,warn,FLAG,33,Peer institution-year with no bachelor's graduation cohort
+C10_retention_yoy_jump,info,FLAG,13,Retention moved more than 10 points versus the prior year for the same institution
+C11_graduation_yoy_jump,info,FLAG,2,6-year graduation rate moved more than 10 points versus the prior year
+C12_revised_changes_retention,info,FLAG,3,Revised file changes the retention rate compared with the original file
+C13_revised_changes_graduation,info,FLAG,9,Revised file changes the bachelor's cohort or completers compared with the original file
+C14_small_cell,info,PASS,0,Full-time cohort under 30 students (rate is too volatile to publish at institution level)
+C15_cross_file_cohort_mismatch,warn,FLAG,4,"Entering-class count (retention file) and graduation cohort (graduation file, 6 years later) differ by more than 10%"
+C16_imputed_values_national,info,FLAG,3,"Imputed or carried-forward retention values anywhere in the national file (all institutions, not only peers)"
