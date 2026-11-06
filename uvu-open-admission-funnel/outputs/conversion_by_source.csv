@@ -1,0 +1,8 @@
+lead_source,inquiries,start_rate,register_rate,inquiry_to_enrolled,enrolled
+Concurrent enrollment,14914,0.5465,0.8312,0.3213,4792
+Campus visit or event,14001,0.4847,0.7889,0.2754,3856
+Referral from student,7473,0.4448,0.7249,0.2335,1745
+High school counselor,12957,0.4267,0.7322,0.2254,2920
+Organic search,18870,0.3438,0.6636,0.1645,3104
+College fair,9483,0.3014,0.6307,0.1399,1327
+Paid social and display,15902,0.1992,0.5593,0.0797,1268

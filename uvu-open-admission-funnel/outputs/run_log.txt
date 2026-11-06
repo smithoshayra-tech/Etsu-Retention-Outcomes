@@ -1,0 +1,55 @@
+check_id                                                                                                                       what severity  violations
+      S1                                                                                                          lead_id is unique    error           0
+      S2 stages never skip: completed needs started, admitted needs completed, registered needs admitted, enrolled needs registered    error           0
+      S3                                                                                             stage and aid flags are 0 or 1    error           0
+      S4                                                                                  every foreign key matches a dimension row    error           0
+      S5                                            registration date is after completion date, and both are after the inquiry date    error           0
+      S6                                   enrolled count within 5% of the real anchor of 4,752 in 2021 to 2023 (calibration check)  warning           0
+      S7                                                                                                    no nulls in key columns    error           0
+      S8                                                                       stage dates exist exactly when the stage flag is set    error           0
+      S9                                                       Utah resident share within 2 points of the real 74.8% in every cycle  warning           0
+     S10                                                                                              contact lag is never negative    error           0
+     S11                        inquiry date falls inside its cycle window, September of the prior year to August of the cycle year    error           0
+     S12                REAL DATA LIMIT: rows UVU has in IPEDS Admissions, 2014 to 2023 (0 means it does not report; informational)     info           0
+
+== funnel_by_cycle
+     term  inquiries  started  completed  admitted  registered  enrolled  start_rate  complete_rate  register_rate  census_rate  inquiry_to_enrolled
+Fall 2021      23400     8942       7035      6927        5094      4719      0.3821         0.7867         0.7354       0.9264               0.2017
+Fall 2022      23400     9292       7302      7193        5188      4820      0.3971         0.7858         0.7213       0.9291               0.2060
+Fall 2023      23400     9328       7299      7183        5251      4924      0.3986         0.7825         0.7310       0.9377               0.2104
+Fall 2024      23400     8742       6832      6729        4891      4549      0.3736         0.7815         0.7269       0.9301               0.1944
+
+== conversion_by_source
+            lead_source  inquiries  start_rate  register_rate  inquiry_to_enrolled  enrolled
+  Concurrent enrollment      14914      0.5465         0.8312               0.3213      4792
+  Campus visit or event      14001      0.4847         0.7889               0.2754      3856
+  Referral from student       7473      0.4448         0.7249               0.2335      1745
+  High school counselor      12957      0.4267         0.7322               0.2254      2920
+         Organic search      18870      0.3438         0.6636               0.1645      3104
+           College fair       9483      0.3014         0.6307               0.1399      1327
+Paid social and display      15902      0.1992         0.5593               0.0797      1268
+
+== response_speed_by_cycle
+     term  share_contacted_after_3_days  start_rate_within_3_days  start_rate_after_3_days
+Fall 2021                        0.1985                    0.4033                   0.2967
+Fall 2022                        0.1975                    0.4228                   0.2927
+Fall 2023                        0.2089                    0.4228                   0.3073
+Fall 2024                        0.3642                    0.4138                   0.3034
+
+== aid_and_residency
+    residency     aid_status  admitted  register_rate
+ Out of state Filed aid form      2831         0.7312
+ Out of state    No aid form      4286         0.5201
+Utah resident Filed aid form     11454         0.8759
+Utah resident    No aid form      9461         0.6440
+
+== lost_before_registration
+    aid_status  admitted  admitted_not_registered  melt_rate
+Filed aid form     14285                     2183     0.1528
+   No aid form     13747                     5425     0.3946
+
+Pandas cross-check of funnel_by_cycle: match within 0.0001
+
+Start-rate gap, contacted within 3 days minus after 3 days: 11.5 points (95% CI 10.8 to 12.2)
+
+4 charts written to /root/uvu-funnel/outputs/charts

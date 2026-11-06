@@ -1,0 +1,13 @@
+check_id,what,severity,violations
+S1,lead_id is unique,error,0
+S2,"stages never skip: completed needs started, admitted needs completed, registered needs admitted, enrolled needs registered",error,0
+S3,stage and aid flags are 0 or 1,error,0
+S4,every foreign key matches a dimension row,error,0
+S5,"registration date is after completion date, and both are after the inquiry date",error,0
+S6,"enrolled count within 5% of the real anchor of 4,752 in 2021 to 2023 (calibration check)",warning,0
+S7,no nulls in key columns,error,0
+S8,stage dates exist exactly when the stage flag is set,error,0
+S9,Utah resident share within 2 points of the real 74.8% in every cycle,warning,0
+S10,contact lag is never negative,error,0
+S11,"inquiry date falls inside its cycle window, September of the prior year to August of the cycle year",error,0
+S12,"REAL DATA LIMIT: rows UVU has in IPEDS Admissions, 2014 to 2023 (0 means it does not report; informational)",info,0

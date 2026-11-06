@@ -1,0 +1,5 @@
+residency,aid_status,admitted,register_rate
+Out of state,Filed aid form,2831,0.7312
+Out of state,No aid form,4286,0.5201
+Utah resident,Filed aid form,11454,0.8759
+Utah resident,No aid form,9461,0.644
